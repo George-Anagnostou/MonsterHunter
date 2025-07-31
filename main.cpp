@@ -65,11 +65,16 @@ void findPotion(Player& player) {
 void fightMonster(Player& player) {
 	Monster monster { Monster::getRandomMonster() };
 	std::cout << "You have encountered a " << monster.getName() << " (" << monster.getSymbol() << ").\n";
+	std::cout << "Player status:\n";
+	player.displayStatus();
+	std::cout << monster.getName() << " status:\n";
+	monster.displayStatus();
 	while (!monster.isDead() && !player.isDead()) {
 		char action { runOrFight() };
 		if (action == 'f') {
 			attackMonster(player, monster);
 			attackPlayer(monster, player);
+			// print status
 			if (monster.isDead()) {
 				constexpr int potionChance { 30 };
 				if (Random::get(1, 100) <= potionChance) {

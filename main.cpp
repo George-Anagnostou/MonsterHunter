@@ -6,6 +6,8 @@
 #include "Random.h"
 
 std::string getUserName() {
+	std::cout << "You wake up in the middle of an unfamiliar forest.\n";
+	std::cout << "Who are you?\n";
 	std::cout << "Enter your name: ";
 	std::string name {};
 	std::cin >> name;
@@ -13,7 +15,14 @@ std::string getUserName() {
 }
 
 void welcome(std::string_view name) {
-	std::cout << "Welcome, " << name << '\n';
+	std::cout << "Hello, " << name << ".\n";;
+	std::cout << "Welcome to...\n";
+	std::cout << "\n\n";
+	std::cout << 
+	"=================================\n"
+	"   M O N S T E R   H U N T E R\n"
+	"=================================\n";
+	std::cout << "\n\n";
 }
 
 char runOrFight() {

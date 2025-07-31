@@ -27,8 +27,8 @@ void attackMonster(Player& player, Monster& monster) {
 	if (player.isDead()) {
 		return;
 	}
-	std::cout << "You hit the " << monster.getName() << " for " << player.getDPA() << " damage.\n";
-	monster.reduceHealth(player.getDPA());
+	std::cout << "You hit the " << monster.getName() << " for " << player.getDamage() << " damage.\n";
+	monster.reduceHealth(player.getDamage());
 	if (monster.isDead()) {
 		std::cout << "You killed the " << monster.getName() << ".\n";
 		player.levelUp();
@@ -42,8 +42,8 @@ void attackPlayer(const Monster& monster, Player& player) {
 	if (monster.isDead()) {
 		return;
 	}
-	std::cout << "The " << monster.getName() << " hit you for " << monster.getDPA() << " damage.\n";
-	player.reduceHealth(monster.getDPA());
+	std::cout << "The " << monster.getName() << " hit you for " << monster.getDamage() << " damage.\n";
+	player.reduceHealth(monster.getDamage());
 }
 
 char getChoice() {

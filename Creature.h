@@ -34,10 +34,7 @@ public:
 
 	void addGold(int gold) { m_gold += gold; }
 	
-	void displayStatus() const {
-		std::cout << '\t' << "Health: " << getHealth() << '\n';
-		std::cout << '\t' << "Damage: " << getDamage() << '\n';
-	}
+	void displayStatus() const;
 };
 
 #endif

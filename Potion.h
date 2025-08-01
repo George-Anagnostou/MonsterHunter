@@ -57,11 +57,7 @@ public:
 		return names[size];
 	}
 
-	std::string getName() const {
-		std::stringstream result {};
-		result << getPotionSizeName(getSize()) << " potion of " << getPotionTypeName(getType());
-		return result.str();
-	}
+	std::string getName() const;
 
 	static Potion getRandomPotion() {
 		return Potion {
